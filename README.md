@@ -1,3 +1,24 @@
+## Link Nexus Requirements branch
+
+This branch adds a **Link Nexus requirements** action to Vortex's Mods table. It turns the requirements mods list on Nexus Mods into dependency rules, so enabling a mod offers to enable the mods it needs, without adding each rule by hand.
+
+The action is in a mod's row menu (Dependencies section) and in the actions for a selection of mods. It looks up the selected mods' requirements and lists them under the mod that requires each:
+
+- **Installed requirements** can be linked as **Required** (a `requires` rule) or **Optional** (`recommends`), or ignored. Each opens on how it's linked now, so the dialog can be reopened at any time to review or change links.
+- **Requirements that aren't installed** are listed as "Not installed", for information.
+- **A requirement installed in a version it doesn't accept** is linked, with a warning giving the installed version and the versions needed.
+- **Rows that saving would change are marked**, and the button counts them.
+
+Selecting every mod and running the action links a whole mod list in one pass.
+
+![Link Nexus requirements button](.github/assets/link-nexus-requirements-button.png)
+
+![Link Nexus requirements dialog](.github/assets/link-nexus-requirements-dialog.png)
+
+It was offered upstream in [#24685](https://github.com/Nexus-Mods/Vortex/pull/24685), which was closed for now while the Vortex team works on larger changes. The request it addresses is [#16426](https://github.com/Nexus-Mods/Vortex/issues/16426).
+
+---
+
 <p align="center">
   <img src=".github/assets/github_readme_title.png" alt="Vortex Mod Manager title banner"/>
 </p>
